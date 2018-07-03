@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Component Interaction';
+  Counter = 5;
+
+  countChangedHandler(count: number) {
+    this.Counter = count;
+    console.log(count);
+  }
 }
