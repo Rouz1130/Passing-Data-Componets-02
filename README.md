@@ -2,7 +2,7 @@
 This is an example tutorial on how to pass data to parent from child Component. The Child component can send data to the Parent 3 different ways.
 1. Raising an 'event'
 2. Local Variable
-3. @ViewChild directive
+3. @ViewChild 
 
 To View each of the 3 ways go to brnches and view the appropraite one. 
 
