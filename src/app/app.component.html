@@ -1,3 +1,5 @@
-<h1>Welcome to {{title}}!</h1>
-<p> current count is {{ClickCounter}} </p>
-<child-component [count]=Counter (countChanged)="countChangedHandler($event)"></child-component>
+<h1>{{title}}</h1>
+<p> current count is {{child.count}} </p>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">decrement</button>
+<child-component></child-component>

@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
@@ -7,19 +7,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent {
-
-  @Input() count: number;
-
-  @Output() countChanged: EventEmitter<number> = new EventEmitter();
+  count = 0;
 
   increment() {
     this.count++;
-    this.countChanged.emit(this.count);
   }
-
   decrement() {
     this.count--;
-    this.countChanged.emit(this.count)
-  }
 
+  }
 }

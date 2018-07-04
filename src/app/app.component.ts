@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
+import { ChildComponent } from './child/child.component';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Component Interaction';
-  Counter = 5;
+  title = 'Component Interaction - ViewChild';
 
-  countChangedHandler(count: number) {
-    this.Counter = count;
-    console.log(count);
+  @ViewChild(ChildComponent) child: ChildComponent;
+
+  increment() {
+    this.child.increment();
   }
+
+  decrement() {
+    this.child.decrement();
+  }
+
 }
